@@ -1,0 +1,72 @@
+- var title = "";
+doctype html
+html
+	include includes/head
+	body
+		.body-wrap
+			.cats 
+				.cats__cat1 
+					//- img(src="./public/img/1.png", alt="")
+					picture
+						source(srcset='./public/img/1m.png' width='481' height="628" media='(max-width: 500px)')
+						img(src='./public/img/1.png' width='441' height="712" alt='' data="0.6").mousemove
+				.cats__cat2 
+					img(src="./public/img/2.png", width='470' height="757" alt="")
+				.cats__cat3
+					//- img(src="./public/img/3.png", alt="")
+					picture
+						source(srcset='./public/img/3m.png' width='386' height="697" media='(max-width: 500px)')
+						img(src='./public/img/3.png' width='413' height="660" alt='' data="-0.6").mousemove
+					
+			.fire-container
+				.fire-container__fire1
+					img(src="./public/img/EFF.png", width='1504' height="852" alt="")
+				.fire-container__fire2
+					img(src="./public/img/Cloud1.png",  width='1549' height="851" alt="")
+			.container 
+				header.header 
+					a(href="#").header__logo
+						img(src="./public/img/logo.png", width='162' height="61" alt="")
+					.header__bonus
+						img(src="./public/img/bonus.png", width='637' height="168" alt="")
+					.header__deposit-text
+						span бонус на депозит
+						span (фриспинов)
+				main.main 
+					
+					.btn-frame
+						img(src="./public/img/border.png",  width='639' height="207" alt="")
+					a.main__btn
+						img(src="./public/img/BTN1.png", width='546' height="117" alt="")
+					//- .main__btn-container
+						//- a(href="http://").main__btn
+						//- 	span Забрать бонус
+				footer.footer
+					.footer__link
+						span
+						| Только на 
+						a(href="#") Catcasino
+
+			.popup
+				.popup__cats 
+					.cat1 
+						img(src="./public/img/1m.png", width='434' height="717" alt="")
+					.cat2 
+						img(src="./public/img/2.png", width='470' height="757" alt="")
+					.cat3 
+						img(src="./public/img/3m.png",  width='386' height="697" alt="")
+				.popup__fire 
+					//- img(src="./public/img/Cloud1.png", width='1549' height="851" alt="")
+				.popup__wrap
+					.popup__close 
+						img(src="./public/img/Close.png", width='23' height='23' alt="")
+					form.popup__form
+						label(for="email" ) E-mail
+						input(type="email" id="email" placeholder="E-mail")
+
+						label(for="pass") Пароль
+						input(type="password" id='pass') 
+						
+						button.popup__reg-btn Регистрация
+							
+		include includes/foot

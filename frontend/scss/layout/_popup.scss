@@ -1,0 +1,162 @@
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background: rgba(15,0,14, 0.98);
+  
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    transition: .7s;
+    pointer-events: none;
+
+   
+
+    &__wrap{
+        z-index: 30;
+        background: url('../img/Frame.png');
+        background-size: cover;
+        width: em(550);
+        position: relative;
+        @media (max-width:500px) {
+            // width: em(550);
+            // margin-right: em(40);
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: -7%;
+        top: 3%;
+        cursor: pointer;
+    }
+
+    &__form{
+        z-index: 15;
+        padding: em(50);
+        display: flex;
+        flex-direction: column;
+        label{
+            padding-left: em(18);
+            color: #fff;
+            font-family: 'TTFirs';
+            font-weight: 400;
+            font-size: em(24);
+            margin-bottom: em(8);
+        }
+        input{
+            // font-size: em(26);
+            background: #fdc2ff;
+            border: none;
+            border-radius: 20px;
+            width: 95%;
+            // color: #fff;
+            font-family: 'TTFirs';
+            margin: 0 auto;
+            margin-bottom: em(15);
+            font-size: em(30);
+            height: em(30);
+            padding-left: em(10);
+        }
+        
+    }
+    &__reg-btn{
+        border-radius: 10px;
+        text-align: center;
+        vertical-align: center;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-family: 'TTFirs';
+        background: #ff00c0;
+        margin: 0 auto;
+        margin-top: em(15);
+        margin-bottom: em(10);
+        width: 95%;
+        font-size: em(24);
+        height: em(55);
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            background: #ff7cdf;
+            transition: 0.3s;
+        }
+    }
+
+
+    &__cats{
+       
+        width: em(550);
+        height:  14.75em;
+        position: relative;
+        .cat1, .cat2, .cat3{
+            position: absolute;
+            width: em(260);
+            // left: 0;
+            img{
+                opacity: 0;
+            }
+        }
+        .cat1{
+            z-index: 11;
+            // width: em(50);
+            left: -4%;
+            top: 9%;
+        
+        }
+        .cat2{
+            z-index: 12;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -26%;
+        }
+        .cat3{
+            z-index: 11;
+            right: 0%;
+            top: -1%;
+           
+        }
+    }
+
+    &__fire {
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -38%) rotate(1deg);
+        width: 105em;
+        z-index: 14;
+        pointer-events: none;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+.visible{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: visible;
+    transition: 0.7s;
+}
+
+
+
+.cats-show{
+    animation: catShow 1s linear both;
+    @keyframes catShow{
+        0%{
+            transform: translateY(15%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+}

@@ -1,0 +1,24 @@
+/*
+
+Use https://transfonter.org/ for a true-man method @font-face
+
+*/
+
+@font-face {
+    font-family: 'TTFirs';
+    src:url('../fonts/TTFirs-Medium.woff2') format('woff2'),
+        url('../fonts/TTFirs-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'TTFirs';
+//     src: url('../fonts/TTFirs-ExtraBold.woff2') format('woff2'),
+//         url('../fonts/TTFirs-ExtraBold.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
